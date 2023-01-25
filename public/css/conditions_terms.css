@@ -1,0 +1,12 @@
+.green{
+    background: #73A904;
+}.text-white{
+    color: #ffffff;
+}.toBack {
+    width: 100%;
+   
+    height: 40px;
+    color: white;
+    padding-left: 9%;
+    padding-top: 1.2%;
+}

@@ -1,0 +1,21 @@
+.login-page,
+.register-page {
+    background: green;
+}
+
+.login-box-body,
+.register-box-body {
+    background: none;
+    padding: 20px;
+    border-top: 0;
+    color: #666;
+}
+
+.login-logo,
+.register-logo {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+    margin-top: 94px;
+}

@@ -1,0 +1,411 @@
+.box-header.with-border {
+    border-bottom: none;
+}.content-wrapper, .right-side {
+    min-height: 100%;
+    background-color: white;
+    z-index: 800;
+}
+  .box {
+    position: relative;
+    border-radius: 3px;
+    background: none;
+    border-top: none;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: none;
+}label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: 700;
+}h2{
+  color:#fff;
+  text-align:center;
+}
+.contenedor{
+    display:flex;
+    flex-wrap:wrap;
+}
+/* .elemento {
+    width: 100%;
+    margin: 1%;
+    border: 1px solid #b7b4b4;
+    border-radius: 2px;
+} */.imagen img {
+    display: block;
+    margin: 0 auto;
+}.nombre {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    min-height: 0px;
+    margin-top: 6px;
+    display: inline-block;
+}.precio {
+    color: red;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+}button.comprar {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 5px;
+}input.numero {
+    width: 37px;
+}
+a.menos, a.menos {
+    width: 80px;
+    background: #bfbebe;
+    font-size: 28px;
+    color: white;
+    padding: 0px 4px 0px 4px;
+}.imagen {
+    width: 70px;
+    display: inline-block;
+    vertical-align: top;
+}
+.content-wrapper, .right-side, .main-footer {
+    margin-left: 0px !important;
+}
+.content {
+    min-height: 250px;
+    padding: 0px !important;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+}img.shop {
+    float: right;
+}/* input[type="button"] {
+    background: #5A7229;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 1%;
+    color: white;
+    margin-bottom: 7px;
+} */
+.elemento {
+    width: 96%;
+    margin: 1%;
+    border-radius: 2px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.35);
+    padding: 10px;
+}.nombre:first-letter {
+    text-transform: uppercase;
+}
+.nombre {
+  
+    text-transform: lowercase;
+    font-weight: bold;
+    text-align: center;
+    min-height: 0px;
+    margin-top: 6px;
+    display: inline-block;
+}
+span.total {
+    margin-left: 4%;
+    font-size: 1.7rem;
+    margin: 2% 0% 2% 2%;
+}.remover{
+    float: right;
+}
+.metodopago .titulo{
+    color:black;
+}button.metodopago_btn {
+    background: linear-gradient(180deg, #73A904 0%, #ACF21C 100%);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.7rem;margin-bottom: 16px;
+}
+.confirmar_pedido_btn{
+    border:none;
+    background:#73A904;padding:10px 15px;
+    color:white;margin-bottom:5px; font-size:15px;
+    width: 80% !important;display: inline-block;
+    margin-left: 10%;margin-right: 10%;
+}
+p{
+    padding: 0px;
+    margin: 0px;
+  }
+  body{
+    margin: 0px;/*  background: #000; */
+  }
+  .header-cont{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+  }
+  .header{
+    height: 50px;
+    background: #73A904;
+     
+    width: 100%;
+    margin: 0px auto;
+    
+  }
+  .content{
+    width: 100%;
+    background: #fff;
+    margin: 20px 0px 0px 0px;
+    margin-top: 50px;
+  }
+  .pie-container{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background: #73A904;
+    display: flex;
+  
+    justify-content: space-between;
+    height:50px;
+  }
+  .pie-item{
+    display: flex;
+    width: 70px;
+     justify-content: center;
+    align-items: center;
+  }
+
+  .flex-container{ 
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex-item{
+    background: #73A904;
+     width: 70px;
+     display: flex;
+     justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .flex-item:nth-child(odd){
+    background: #73A904;
+  }
+  .flex-item:nth-child(2){
+    background: #73A904;
+    width: 140px;
+  }i.fas.fa-sort-down {
+    color: #ffffff;
+    font-size: 1.2em;
+}.flex-item i {
+    margin-bottom: 6%;
+  
+}
+.fa-search{
+  color: #fff;
+}
+i.fas{
+    color: #fff;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+.flex-item:first-child {
+    width: 100px !important;
+}
+.icon_disbled {
+    color: rgba(255, 255, 255, .4) !important;
+}
+a:hover, a:active, a:focus {
+    outline: none;
+    text-decoration: none;
+    color: #fff;
+}
+/* ************************** */
+/* Lugar de recojo */
+/* ************************** */
+.placePickup {
+    padding: 8px 3%;
+}
+.placePickup p, .totalProducts p, .metododepago p {
+   /*  font-size: .8rem; */
+    margin-bottom: 4px;
+}
+.store {
+    border: 1px solid #ccc;
+    padding: 2%;
+    border-radius: 6px;
+}
+.totalProducts {
+    padding: 0px 3% 3% 3%;
+}.price {
+    border: 1px solid #ccc;
+    padding: 2%;
+    border-radius: 6px;
+}
+.price span:first-child {
+    font-size: 1.2rem;
+}.price p {
+    margin-top: 2px;
+    color: #f00;
+    margin-bottom: 2px;
+}
+body > div.content > div.totalProducts > div > span:nth-child(3) {
+    color: #757575;
+    font-size: 1.2rem;
+}
+
+.btnConfirmPurcharse {
+    padding: 15px 140px;
+    background: #73a904;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+}.minimumOrder {
+    color: #757575;
+    font-size: 1.2rem;
+    text-align: center;
+    display: block;
+    margin-top: 4px;
+} .confirmPurcharse-container{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    
+    display: flex;
+  
+    justify-content: space-between;
+    height:50px;
+  }
+  .confirmPurcharse-item{
+    display: flex;
+    width: 100%;
+     justify-content: center;
+    align-items: center;
+  }
+  button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: none;
+    cursor: none;
+}.elemento:nth-last-child(2) {
+    margin-bottom: 13%;
+    /* background: red; */
+} .confirmPurcharse-container2{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    
+    display: flex;
+  
+    justify-content: space-between;
+    height:50px;
+  }
+  .confirmPurcharse-item2{
+    display: flex;
+    width: 100%;
+     justify-content: center;
+    align-items: center;
+  }.btnConfirmPurcharse2 {
+    padding: 15px 20PX;
+/*     padding: 15px 10px; */
+    background: #73a904;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+}
+
+/**
+*******************************************
+ Agregando el nuevo confirmar pedido de acuerdo a los nuevos input
+*******************************************
+ */
+ .minimumOrder {
+    color: #757575;
+    font-size: .8rem;
+    text-align: center;
+    display: block;
+    margin-top: 4px;
+}.totalapagar {
+    padding: 0px 3% 0px 3%;
+}.totalapagar-container {
+    border: 1px solid #ccc;
+    padding: 2%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+}.totalProductsBorder {
+    border: 1px solid #ccc;
+    padding: 2%;
+    border-radius: 6px;
+}.resumenpedido-container {
+    display: flex;
+    justify-content: space-between;
+}.resumenpedido-container2 {
+    display: flex;
+    justify-content: space-between;
+}.metododepago {
+    padding: 8px 3%;
+}.metododepago-border {
+    border: 1px solid #ccc;
+    padding: 2%;
+    border-radius: 6px;
+}.metododepago-container {
+    display: flex;
+    justify-content: space-between;
+}input.btntouch {
+    padding: 15px 20PX;
+    background: #73a904;
+    color: #fff;
+    border-radius: 8px;
+    border: none;margin: 0 auto;
+    display: block;
+}input.precio {
+    width: 120px;
+    height: 30px;
+    margin-top: 3%;    margin: 0 auto;
+    display: block;
+}.resumenpedido-container2 {
+    color: #7b7b7b;
+    margin-top: 2%;
+}.checkbox-label, .radio-label {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 3px 7px;
+    border-bottom: 3px solid #557e03;
+    color: #f3f3f3;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background: #73a904;
+}label.radio-label.btnLogin {
+    padding: 7px 5px;
+    text-align: center;
+    min-width: 40%;
+}.btnFocus {
+    background-color: #73a904 !important;
+    border-bottom: 3px solid #557e03 !important;
+}.checkbox, .radio {
+    position: relative;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}.ocultar {
+    visibility: hidden;
+    margin-top: -125px;
+    z-index: -1;
+}.ocultarPagoEfectivo{
+    visibility: hidden;
+ 
+}
+.precioPagoEfectivo {
+    display: block;
+    width: 70%;
+}/* #formulario > div:nth-child(4) {
+    margin-top: 39%;
+} */

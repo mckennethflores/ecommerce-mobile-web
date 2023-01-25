@@ -1,0 +1,227 @@
+.box-header.with-border {
+    border-bottom: none;
+}
+
+.content-wrapper,
+.right-side {
+    min-height: 100%;
+    background-color: green;
+    z-index: 800;
+}
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: none;
+    border-top: none;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: none;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: 700;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*     .elemento {
+        width: 25%;
+        margin: 3%;
+    } */
+.elemento {
+    width: 45%;
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elemento img {
+    width: 100%;
+}
+
+/* #formulario>div>div:nth-child(10) {
+    margin-left: 34%;
+} */
+
+.skin-green .wrapper,
+.skin-green .main-sidebar,
+.skin-green .left-side {
+    background-color: #73A904;
+}
+
+.wrapper {
+    background-color: #73A904;
+    background-image: url(../../files/crl_jaramillo.png);
+    background-repeat-x: no-repeat;
+    background-position-x: right;
+    background-repeat-y: no-repeat;
+    background-position-y: bottom;
+}
+
+.headStore img {
+    display: block;
+    margin: 0 auto;
+}
+
+.headStore {
+    background: #2E4514;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headStore div {
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.headStore div img {
+    margin-top: 2%;
+}
+
+.headStore div {
+    height: 39px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.wrapper h3 {
+    text-align: center;
+    color: #ffffff;
+}
+
+div#modal {
+    width: 92%;
+    background: #ffffff;
+    margin: 0% auto;
+    height: 90%;
+    padding: 8px;
+    position: absolute;
+    z-index: 3;
+    left: 4%;
+    top: 2%;
+    min-height: 418px;
+}
+
+div#bloque2 {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+input {
+    font-size: 1.3rem;
+    padding: 7px !important;
+    border: 2px solid #8BC34A;
+    border-radius: 3px;
+}
+
+#cerrar {
+    display: inline-block;
+    float: right;
+    padding: 8px 12px;
+}
+
+h2.titulo {
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 8px;
+    font-weight: bold;
+}
+
+h6 {
+    font-weight: bold;
+    font-size: 1.22rem;
+}
+
+.header {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+span#cerrar {
+    position: relative;
+    right: 0;
+    top: -37px;
+    float: right;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: green;
+}
+
+input.cls_prefijo_tienda_input {
+    width: 18%;
+    padding: 4px;
+    text-transform: uppercase;
+}
+
+input.cls_codigo_tienda_input {
+    width: 70%;
+    padding: 4px;
+}
+
+input.cls_nombres_input,
+.cls_dni_input,
+.cls_dni_input,
+.cls_telefono_input {
+    width: 95%;
+    padding: 4px;
+}
+
+#modal>form>div:nth-child(1)>span {
+    padding: 0 1px;
+}
+
+#guardar_btn {
+    height: 40px;
+    background: #5a7229;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    width: 100%;
+    margin-top: 3%;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 8px;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.51);
+}
+
+.error {
+    color: red;
+}
+img.imgDeliveryCobertura {
+    width: 100% !important;
+    height: 85%;
+}
+#modal h2 {
+    color: #184d47;
+}

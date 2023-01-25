@@ -1,0 +1,272 @@
+.box-header.with-border {
+    border-bottom: none;
+}
+
+.content-wrapper,
+.right-side {
+    min-height: 100%;
+    background-color: white;
+    z-index: 800;
+}
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: none;
+    border-top: none;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: none;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: 700;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.elemento {
+    width: 48%;
+    margin: 1%;
+    border: 1px solid #b7b4b4;
+    border-radius: 2px;
+}
+
+.imagen img {
+    display: block;
+    margin: 0 auto;
+}
+
+.nombre {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    min-height: 82px;
+    margin-top: 6px;
+}
+
+.precio {
+    color: red;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+}
+
+button.comprar {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 5px;
+}
+
+input.numero {
+    width: 37px;
+}
+
+a.menos,
+a.menos {
+    width: 80px;
+    background: #bfbebe;
+    font-size: 28px;
+    color: white;
+    padding: 0px 4px 0px 4px;
+}
+
+.content-wrapper,
+.right-side,
+.main-footer {
+    margin-left: 0px !important;
+}
+
+.content {
+    min-height: 250px;
+    padding: 0px !important;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.input {
+    width: 15%;
+    text-align: center;
+}
+
+img.shop {
+    float: right;
+}
+
+button.stilo_btn {
+    background: #5A7229;
+    border: none;
+    padding: 0px 8px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.cantidad {
+    padding-left: 30%;
+    margin-bottom: 9%;
+}
+
+.comprar_btn {
+    margin-bottom: 5px;
+    font-size: 12.5px;
+    width: 80% !important;
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 10%;
+    background: #5A7229;
+    border: none;
+    padding: 10px 10px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.login-logo {
+    background: #73A904;
+}
+
+/* ******************************** */
+/* Diseño cabecera y pie fijos o fixed sirve para la usabilidad del app */
+/* ************************************ */
+body {
+    margin: 0px;
+    /*  background: #000; */
+}
+
+.header-cont {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+}
+
+.header {
+    height: 50px;
+    background: #73A904;
+
+    width: 100%;
+    margin: 0px auto;
+
+}
+
+.content {
+    width: 100%;
+    background: #fff;
+    margin: 20px 0px 0px 0px;
+    margin-top: 50px;
+}
+
+.pie-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background: #73A904;
+    display: flex;
+
+    justify-content: space-between;
+    height: 50px;
+}
+
+.pie-item {
+    display: flex;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-item {
+    background: #73A904;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.flex-item:nth-child(odd) {
+    background: #73A904;
+}
+
+.flex-item:nth-child(2) {
+    background: #73A904;
+    width: 140px;
+}
+
+i.fas.fa-sort-down {
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.flex-item i {
+    margin-bottom: 6%;
+
+}
+
+.fa-search {
+    color: #fff;
+}
+
+i.fas {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/******************************************************************
+************************ categorias ****************************
+**************************************************************** */
+ul#listCategory a {
+    color: #3e3e3e;
+    font-size: 1.8rem;
+    line-height: 39px;
+
+    list-style: none;
+}
+
+ul#listCategory {
+    margin: 0;
+    padding: 0;
+}
+
+ul#listCategory a li:hover {
+    color: #3e3e3e;
+}
+
+ul#listCategory a li {
+    padding: 10px 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    text-transform: uppercase;
+}
+
+#listCategory>a:last-child>li {
+    margin-bottom: 59px;
+}
+
+/* ****************************************************************
+  ************************ /categorias ****************************
+  **************************************************************** */
