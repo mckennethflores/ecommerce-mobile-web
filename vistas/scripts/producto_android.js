@@ -190,7 +190,7 @@ function listCategoryLine(categoryLines) {
   categoryLines.forEach((item1, index) => {
     var idstore = getParamUrl();
     var post2 = `<div class="contentImageMainProducts">
-    <div class="imageMainProducts"><a href="sublinea_android.php?idstore=${idstore}&idlinea=${item1.idproductolinea}"><img src="../files/${item1.imagen}" alt="">
+    <div class="imageMainProducts"><a href="sublinea_android.php?idstore=${idstore}&idlinea=${item1.idproductolinea}"><img class="divImgLine" src="../files/${item1.imagen}" alt="">
     <span>${item1.nomproductolinea}</span></a></div>
     </div>`;
 

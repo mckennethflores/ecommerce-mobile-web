@@ -27,7 +27,7 @@ class Linea_Android{
       imagen,
       condicion, orden
       FROM
-      linea WHERE idproductolinea > 0 and condicion > 0 GROUP BY orden";
+      linea WHERE idproductolinea > 0 and condicion > 0 GROUP BY idproductolinea DESC";
       return ejecutarConsulta($sql);
     }
 

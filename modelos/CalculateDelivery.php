@@ -36,7 +36,7 @@ class CalculateDelivery{
     }
     public function desactivateadress($idusuario)
     { 
-        $sql2="UPDATE `direcuser` SET  `selected`=0 WHERE idusuario='$idusuario'";
+        $sql2="UPDATE `direcuser` SET  `selected`= 0 WHERE idusuario='$idusuario'";
         return  ejecutarConsulta($sql2);
     }    
     public function listarIdStore($idusuario){

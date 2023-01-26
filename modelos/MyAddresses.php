@@ -14,21 +14,25 @@ class MyAddresses{
     public function listarDireccionesUsuario($idusuario)
     {
     $sql="SELECT
-    direcuser.iddirecuser,
-    direcuser.idusuario,
-    direcuser.iddistrito,
-    distritos.descripcion AS distrito,
-    direcuser.direccion,
-    direcuser.selected,
-    zonas.nomzona,
-    direcuser.delivery,
-    direcuser.iddepartamento,
-    departamento.nomdepa AS departamento
-    FROM
-    direcuser
-    INNER JOIN distritos ON distritos.id = direcuser.iddistrito
-    INNER JOIN zonas ON zonas.id = direcuser.idzona
-    INNER JOIN departamento ON departamento.id = direcuser.iddepartamento
+	direcuser.iddirecuser, 
+	direcuser.idusuario, 
+	direcuser.iddistrito, 
+	distritos.descripcion AS distrito, 
+	direcuser.direccion, 
+	direcuser.selected, 
+	zonas.nomzona, 
+	direcuser.delivery, 
+	direcuser.iddepartamento
+FROM
+	direcuser
+	INNER JOIN
+	distritos
+	ON 
+		distritos.id = direcuser.iddistrito
+	INNER JOIN
+	zonas
+	ON 
+		zonas.id = direcuser.idzona
     WHERE idusuario = '$idusuario'";
     return ejecutarConsulta($sql);
     }

@@ -95,7 +95,7 @@ function saveStoreAjax(idstore) {
                             $(location).attr("href", "../vistas/producto_android.php?idstore=" + idstore);
                         } */
             console.log(datos);
-            $(location).attr("href", "../vistas/producto_android.php?idstore=" + idstore);
+        //    $(location).attr("href", "../vistas/producto_android.php?idstore=" + idstore);
             // Android.showToast("Se ingreso la dirección con exito");
 
         }

@@ -70,7 +70,13 @@ if ($_SESSION['usuarios']==1)
           </div>
       </section>
     </div>
-<!-- / Contenido-->    
+<!-- / Contenido-->
+<style>
+  .content-wrapper, .right-side {
+
+    height: 500px;
+}
+</style>
 <?php
 }else
 {

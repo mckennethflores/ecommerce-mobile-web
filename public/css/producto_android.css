@@ -869,3 +869,6 @@ span.codigoBarra {
     float: right;
     padding: 4px 8px;
 }
+.divImgLine {
+    width: 75px;
+}

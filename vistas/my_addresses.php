@@ -67,17 +67,18 @@ $myaddresses = new MyAddresses();
                         $rspta=$myaddresses->listarDireccionesUsuario($IDUSUARIO);
                       
                     while ($reg=$rspta->fetch_object()){
-                            $id = $reg->iddirecuser; $departamento = $reg->departamento; $distrito = $reg->distrito; $direccion = $reg->direccion;      $nomzona = $reg->nomzona;
+                            $id = $reg->iddirecuser;  $distrito = $reg->distrito; $direccion = $reg->direccion;      $nomzona = $reg->nomzona;
                             $delivery = $reg->delivery;
                       ?>
                         <li class="margin-left margin-right ">
                             <label for="direcciones<?php echo $id; ?>" class="cont_mydir card-input">
                                 <div class="box_mydir"><i class="fas fa-map-marker-alt"></i></div>
-                                <div class="box_mydir"> <?php echo $departamento." / ".$distrito . ", ".$nomzona. ", ". $direccion; ?></div>
+                                <div class="box_mydir"> <?php echo "Lima / ".$distrito . ", ".$nomzona. ", ". $direccion; ?></div>
+                                
                               <!--   <div class="box_mydir"><i class="far fa-edit"></i></div>
                                 <div class="box_mydir"> <i class="far fa-trash-alt"></i></div> -->
                                 <input type="radio" id="direcciones<?php echo $id; ?>" name="my_addresses" class="my_addresses"
-                                    value="<?php echo $id; ?>" class="radio card-input-element">
+                                <?= $reg->selected=="1" ? "checked": "" ?>   class="radio card-input-element">
                             </label>
                         </li>
                     <?php

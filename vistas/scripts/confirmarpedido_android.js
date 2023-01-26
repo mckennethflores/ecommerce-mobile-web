@@ -312,7 +312,7 @@ function confirmarPedido(idstore) {
 
         if (result) {
           guardaryeditar();
-        //  $(location).attr("href", "confirmarpedi_recojoentienda_android.php?idstore=" + idstore);
+          $(location).attr("href", "confirmarpedi_recojoentienda_android.php?idstore=" + idstore);
         }
       }
     });

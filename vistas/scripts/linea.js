@@ -19,6 +19,8 @@ function limpiar()
 	$("#idlinea").val("");
 	$("#nombre").val("");
 	$("#imagen").val("");
+	$("#imagenmuestra").attr("src","");
+	$("#imagenactual").val("");
 }
 
 //Función mostrar formulario
@@ -28,6 +30,10 @@ function mostrarform(flag) {
 		$("#listadoregistros").hide();
 		$("#formularioregistros").show();
 		$("#btnGuardar").prop("disabled", false);
+		
+		$("#imagenmuestra").hide();
+		$("#imagenactual").val("");
+
 	} else {
 		$("#listadoregistros").show();
 		$("#formularioregistros").hide();
@@ -93,8 +99,10 @@ function mostrar(idlinea) {
 		$("#idlinea").val(data.idproductolinea);
 		$("#nombre").val(data.nomproductolinea);
 		$("#imagenmuestra").show();
-		$("#imagenmuestra").attr("src", "../files/lineas/" + data.imagen);
+		$("#imagenmuestra").attr("src", "../files/" + data.imagen);
 		$("#imagenactual").val(data.imagen);
+
+		
 	})
 }
 

@@ -12,6 +12,20 @@ $imagen=isset($_POST["imagen"])? limpiarCadena($_POST["imagen"]):"";
         
         case 'guardaryeditar':
 
+            if (!file_exists($_FILES['imagen']['tmp_name']) || !is_uploaded_file($_FILES['imagen']['tmp_name']))
+            {
+                $imagen=$_POST["imagenactual"];
+            }
+            else 
+            {
+                $ext = explode(".", $_FILES["imagen"]["name"]);
+                if ($_FILES['imagen']['type'] == "image/jpg" || $_FILES['imagen']['type'] == "image/jpeg" || $_FILES['imagen']['type'] == "image/png")
+                {
+                    $imagen = round(microtime(true)) . '.' . end($ext);
+                    move_uploaded_file($_FILES["imagen"]["tmp_name"], "../files/" . $imagen);
+                }
+            }
+
             if(empty($idlinea)){
                 $rspta=$linea->insertar($nombre, $imagen);
                 echo $rspta ? "Linea registrada": "Linea no se puedo registrar";

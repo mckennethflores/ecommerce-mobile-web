@@ -37,22 +37,42 @@ function mostrarform(flag) {
 }
 // Te olvidaste poner el parametro
 function guardaryeditar(e) {
-
 	e.preventDefault();
-	$("#btnGuardar").prop("disabled", true);
-	var formData = new FormData($("#formulario")[0]);
 
-	$.ajax({
-		url: "../ajax/usuario.php?op=registrousuarioandroid",
-		type: "POST",
-		data: formData,
-		contentType: false,
-		processData: false,
+	var dniusuario = document.querySelector("#dniusuario").value;
+	var nomusuario = document.querySelector("#nomusuario").value;
+	var emailusuario = document.querySelector("#emailusuario").value;
+	var claveusuario = document.querySelector("#claveusuario").value;
 
-		success: function (datos) {
-			console.log("Se registro exitosamente" + datos);
-		}
-	});
+	if(dniusuario.trim() != "" && nomusuario.trim() != "" && emailusuario.trim() != "" && claveusuario.trim() != "" ){
+		//$("#btnGuardar").prop("disabled", true);
+		var formData = new FormData($("#formulario")[0]);
+
+		$.ajax({
+			url: "../ajax/usuario.php?op=registrousuarioandroid",
+			type: "POST",
+			data: formData,
+			contentType: false,
+			processData: false,
+
+			success: function (datos) {
+				data = JSON.parse(datos);
+
+				if(data.message == "success"){
+					alert("Usuario registrado satisfactoriamente");
+				}else if(data.message == "existeusuario"){
+					alert("El usuario ya existe en nuestra plataforma");
+					
+				}else if(data.message == "existeemail" ){
+					alert("El email o correo ya existe");
+				}
+			}
+		});
+	}else{
+		bootbox.alert("Porfavor rellene todos los campos");
+	}
+
+	
 	/* limpiar(); */
 
 }
