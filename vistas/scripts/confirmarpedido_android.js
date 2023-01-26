@@ -162,9 +162,7 @@ function confirmarCompra(value) {
 }
 
 function sumar() {
-  var delivery_input = parseFloat(
-    document.querySelector("#delivery_input").value
-  );
+  var delivery_input = parseFloat(document.querySelector("#delivery_input").value);
   var subtotal = 0;
   var list = document.querySelectorAll(".precioOcultoCalcularJs");
 

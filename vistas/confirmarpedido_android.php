@@ -7,7 +7,17 @@ session_start();
 require_once "../modelos/CarritoProducto_Android.php";
 require_once "../modelos/Tiendas.php";
 
- $IDUSUARIO = $_SESSION['idusuario'];
+/* Esta es la sesión que recupero de producto_android.php, de la sesion se llama idusuario_sinlogueo */
+ //echo $IDUSUARIO = $_SESSION['idusuario_sinlogueo'];
+
+ if(isset($_SESSION['idusuario_sinlogueo'])){
+  $IDUSUARIO = $_SESSION['idusuario_sinlogueo'];
+ }else{
+  $_SESSION['idusuario_sinlogueo'] = round(microtime(true));
+ }
+
+ //$IDUSUARIO = $_SESSION['idusuario'];
+
 /* idstore = Se utiliza para regresar atras y volver a ver la tienda seleccionada */
   $idstore= $_GET['idstore']; 
  
@@ -18,9 +28,10 @@ require_once "../modelos/Tiendas.php";
   $carritoproductoandroid->selectStoreDestination($IDUSUARIO);
   //$iddestino = $carritoproductoandroid->getIdDestination($IDUSUARIO);
 
-  $origen = $_SESSION['iddistrito_origen'];
+/*   Desactive estas sesiones porque ahora que la tienda no inicia con el login no lo necesito */
+/*   $origen = $_SESSION['iddistrito_origen'];
   $destino = $_SESSION['iddistrito_destino'];
-  $delivery = $_SESSION['delivery_destino'];
+  $delivery = $_SESSION['delivery_destino']; */
   
 
 /*   if($origen == $destino){
@@ -83,31 +94,7 @@ require_once "../modelos/Tiendas.php";
                    
                       
 <!--    Origen Destino -->
-                      <div class="placePickup">
-                        <p>Origen</p>
-                        <div class="store">
-                          <?php
-                        echo  $carritoproductoandroid->selectStoreFrom($IDUSUARIO);
-                          
-                        if($origen !=$destino){
-                          echo 'Distritos muy lejanos, porfavor cambie de distrito <a href="#" onclick="changeStore('.$idstore.','.$IDUSUARIO.')" class="btn-success">Cambiar</a>';
-                          $precio_delivery = 15;
-                        }else{
-                          $precio_delivery = (int)$delivery;
-                        }
-                          ?>
-                          
-                          
-                        </div>
-                        </div>
-                        <div class="placePickup">
-                        <p>Destino</p>
-                        <div class="store">
-                          <?php
-                         echo $carritoproductoandroid->selectStoreDestination($IDUSUARIO);
-                          ?>                             
-                        </div>
-                      </div>
+                     
 <!--    Delivery      -->                                
                       <div class="totalProducts">
                         <p>Resumen de pedido</p>
@@ -119,10 +106,10 @@ require_once "../modelos/Tiendas.php";
                           </div>
                           <div class="resumenpedido-container2">
                             <div class="resumenpedido-item2">Precio por delivery</div>
-                            <div class="resumenpedido-item2">S/ <span id="delivery_span">
-                            <?php echo number_format($precio_delivery, 2, '.', ' ');?></span>
-                            <input type="hidden" id="delivery_input"  name="delivery_input" value="<?php echo number_format($precio_delivery, 2, '.', ' ');?>">
-                            <input type="hidden" id="valueHiddenDelivery" value="<?php echo number_format($precio_delivery, 2, '.', ' ');?>">
+                            <div class="resumenpedido-item2">S/ <span id="delivery_span">10.00
+                            <?php // echo number_format($precio_delivery, 2, '.', ' ');?></span>
+                            <input type="hidden" id="delivery_input"  name="delivery_input" value="10.00<?php //echo number_format($precio_delivery, 2, '.', ' ');?>">
+                            <input type="hidden" id="valueHiddenDelivery" value="<?php // number_format($precio_delivery, 2, '.', ' ');?>">
                             </div>
                           </div>
                         </div>

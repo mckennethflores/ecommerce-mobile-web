@@ -1,14 +1,28 @@
 <?php
+
+//header ('Location: producto_android.php?idstore=321314');
 /* 	*********************************
 		Funciones Android
     ********************************* */
 ob_start();
 session_start();
 require_once "../modelos/Producto_Android.php";
-  $IDUSUARIO = $_SESSION['idusuario'];
+/*
+Esta es la sesión que se creo con microtime, para evitar el inicio de sesión
+*/
+
+
+ if(isset($_SESSION['idusuario_sinlogueo'])){
+  $IDUSUARIO = $_SESSION['idusuario_sinlogueo'];
+ }else{
+  $_SESSION['idusuario_sinlogueo'] = round(microtime(true));
+ }
+
+//$IDUSUARIO =$_SESSION['idusuario_sinlogueo'];
+ // $IDUSUARIO = $_SESSION['idusuario'];
   $productoandroid = new Producto_Android();
   //UPDATE STOCK
-  echo $idstore= $_GET['idstore'];
+   $idstore= $_GET['idstore'];
 /*   $_SESSION['idstore'] = $idstore;  $IDSTORE = $_SESSION['idstore']; */ /*   var_dump($IDSTORE); */
 //ACTUALIZAMOS TODOS LOS PRODUCTOS DE LA BASE DE DATOS EXTERNA = llama modelos
   //$productoandroid->actualizarStockBce($idstore);

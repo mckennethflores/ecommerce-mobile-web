@@ -88,21 +88,26 @@ return; */
         ejecutarConsulta($sqlDeleteStoreTemp);
     }
    }
-
+/* Estoy cambiando la sentencia SQL porque necesito hacer la consulta al idusuario de la temporal. Anteriormente estaba haciendo la consulta a la tabla usuario pero como
+el id es generado por microtime obviame no son iguales */
     public function listarprodtemp($idusuario)
     {
        $sql="SELECT
-       ppt.idpaprotemp,
-       p.imagen,
-       p.nomproductocorto,
-       p.valorventa,
-       u.idusuario,
-       ppt.cantidad,
-       ppt.idproducto
-       FROM
+       ppt.idpaprotemp, 
+       p.imagen, 
+       p.nomproductocorto, 
+       p.valorventa, 
+       ppt.cantidad, 
+       ppt.idproducto, 
+       ppt.idusuario
+   FROM
        paprotemp AS ppt
-       INNER JOIN producto AS p ON p.idproducto = ppt.idproducto
-       INNER JOIN sb_usuarios AS u ON u.idusuario = ppt.idusuario WHERE u.idusuario = $idusuario";
+       INNER JOIN
+       producto AS p
+       ON 
+           p.idproducto = ppt.idproducto
+   WHERE
+       ppt.idusuario = $idusuario";
        return ejecutarConsulta($sql);		
     }
     public function listarRecojoEnTienda($idusuario)

@@ -48,7 +48,7 @@ function deleteproductstempadded(idusuario) {
     .done(function (data) {
       console.log(data);
     });
-}
+}comprar_fun
 /* SAVE PRODUCT */
 function guardarproducto() {
   var formData = new FormData($("#formulario")[0]);
@@ -207,9 +207,20 @@ function listCategoryLine(categoryLines) {
 
 //FUNCION QUE SE INICE AL CARGAR LA PAGINA
 //VALIDA DIRECCION USUARIO
+var unavez = true;
+
+
+
 $(document).ready(function () {
   var idstore = getParamUrl();
-  var formData = new FormData($("#formulario")[0]);
+  /* if(unavez){
+
+    $(location).attr("href", "producto_android.php?idstore="+idstore);
+    unavez = false;
+  } */
+
+  /* Desactive la funcion al cargar la página */
+  /* var formData = new FormData($("#formulario")[0]);
   $.ajax({
     url: "../ajax/producto_android.php?op=validadireccion",
     type: "POST",
@@ -226,8 +237,8 @@ $(document).ready(function () {
     error: function () {
       console.log("A ocurrido un error");
     },
-  });
-
+  }); */
+/* /Desactive la funcion al cargar la página */
   var formData2 = new FormData($("#formulario")[0]);
   $.ajax({
     url: "../ajax/carritoproducto_android.php?op=thereProductsAdded",
