@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 26, 2023 at 01:31 AM
+-- Generation Time: Jan 31, 2023 at 04:24 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.4.9
 
@@ -1905,14 +1905,16 @@ CREATE TABLE IF NOT EXISTS `direcuser` (
   `delivery` decimal(11,2) NOT NULL,
   `selected` varchar(10) COLLATE utf8_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`iddirecuser`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `direcuser`
 --
 
 INSERT INTO `direcuser` (`iddirecuser`, `idusuario`, `idstore`, `iddepartamento`, `iddistrito`, `idzona`, `direccion`, `delivery`, `selected`) VALUES
-(1, 519, 321314, '', '29', '17', 'lima', '5.00', '1');
+(1, 519, 321314, '', '29', '17', 'lima', '5.00', '1'),
+(2, 29, 321314, '', '29', '17', 'lima', '5.00', '0'),
+(3, 29, 321314, '', '29', '17', 'lima', '5.00', '1');
 
 -- --------------------------------------------------------
 
@@ -2044,7 +2046,7 @@ CREATE TABLE IF NOT EXISTS `linea` (
   `condicion` tinyint(1) DEFAULT '1',
   `orden` int(10) DEFAULT NULL,
   PRIMARY KEY (`idproductolinea`)
-) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `linea`
@@ -2069,7 +2071,8 @@ INSERT INTO `linea` (`idproductolinea`, `nomproductolinea`, `imagen`, `condicion
 (33, 'Congelados', 'noimage.jpg', 0, NULL),
 (34, 'San Valentin', 'san-valentin.jpg', 0, 1),
 (35, 'Linea 1', 'noimage.jpg', 0, NULL),
-(36, 'Pablo', '1674681199.jpg', 1, NULL);
+(36, 'Renan', '1674853363.png', 1, NULL),
+(37, 'Celulares', '1674764550.png', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -2085,7 +2088,7 @@ CREATE TABLE IF NOT EXISTS `lineaspedido` (
   `unidadeslineaspedido` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `preciolineaspedido` decimal(11,2) NOT NULL,
   PRIMARY KEY (`idlineaspedido`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `lineaspedido`
@@ -2108,7 +2111,15 @@ INSERT INTO `lineaspedido` (`idlineaspedido`, `idpedidolineaspedido`, `idproduct
 (14, 10, 36, '2', '26.80'),
 (15, 11, 320, '3', '26.80'),
 (16, 12, 320, '2', '26.80'),
-(17, 12, 36, '2', '26.80');
+(17, 12, 36, '2', '26.80'),
+(18, 13, 171, '2', '8.10'),
+(19, 13, 269, '2', '7.80'),
+(20, 14, 109, '6', '1.50'),
+(21, 14, 106, '6', '1.40'),
+(22, 14, 320, '2', '26.80'),
+(23, 14, 104, '6', '4.20'),
+(24, 15, 36, '2', '26.80'),
+(25, 15, 320, '2', '26.80');
 
 -- --------------------------------------------------------
 
@@ -2122,7 +2133,7 @@ CREATE TABLE IF NOT EXISTS `marca` (
   `descripcion` varchar(80) COLLATE utf8_spanish_ci NOT NULL,
   `condicion` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=142 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=143 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `marca`
@@ -2268,7 +2279,8 @@ INSERT INTO `marca` (`id`, `descripcion`, `condicion`) VALUES
 (138, 'SILICONA', 1),
 (139, 'KN95', 1),
 (140, 'CORONA', 1),
-(141, 'GILLETTE', 1);
+(141, 'GILLETTE', 1),
+(142, 'Samsung', 1);
 
 -- --------------------------------------------------------
 
@@ -2284,7 +2296,19 @@ CREATE TABLE IF NOT EXISTS `paprotemp` (
   `precio` decimal(7,2) NOT NULL,
   `cantidad` varchar(11) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`idpaprotemp`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `paprotemp`
+--
+
+INSERT INTO `paprotemp` (`idpaprotemp`, `idproducto`, `idusuario`, `precio`, `cantidad`) VALUES
+(32, 104, 1675016056, '4.20', '6'),
+(28, 266, 1674855169, '4.40', '6'),
+(27, 104, 1674855169, '4.20', '3'),
+(26, 320, 29, '26.80', '4'),
+(31, 200, 1675016056, '4.20', '1'),
+(22, 104, 1674783919, '4.20', '2');
 
 -- --------------------------------------------------------
 
@@ -2311,25 +2335,14 @@ CREATE TABLE IF NOT EXISTS `pedidos` (
   `direccion` varchar(200) COLLATE utf8_spanish_ci DEFAULT NULL,
   `vuelto` decimal(11,2) DEFAULT NULL,
   PRIMARY KEY (`idpedido`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `pedidos`
 --
 
 INSERT INTO `pedidos` (`idpedido`, `codigopedido`, `idusuario`, `fechapedido`, `idestadopedido`, `tipodepago`, `recojoen`, `total`, `pagacon`, `idstore`, `subtotal`, `delivery`, `razonsocial`, `ruc`, `direccion`, `vuelto`) VALUES
-(1, '', '29', '2023-01-24 17:33:20', '2', 'Tarjeta', 'Recojo en tienda', '53.20', '0.00', '321314', '53.20', '0.00', '', '', '', '0.00'),
-(2, 'PTB002', '29', '2023-01-24 17:33:20', '2', 'Tarjeta', 'Recojo en tienda', '53.20', '0.00', '321314', '53.20', '0.00', '', '', '', '0.00'),
-(3, 'PED003', '29', '2023-01-24 17:40:31', '2', 'Tarjeta', 'Recojo en tienda', '79.80', '0.00', '321314', '79.80', '0.00', NULL, NULL, NULL, NULL),
-(4, '29', '29', '2023-01-24 17:50:00', '2', 'Tarjeta', 'Envio delivery', '79.80', '0.00', '321314', '79.80', '0.00', '', '', '', '0.00'),
-(5, 'P00-5', '29', '2023-01-24 17:50:00', '2', 'Tarjeta', 'Envio delivery', '79.80', '0.00', '321314', '79.80', '0.00', '', '', '', '0.00'),
-(6, '29', '29', '2023-01-24 17:50:37', '3', 'Tarjeta', 'Recojo en tienda', '107.20', '0.00', '321314', '107.20', '0.00', '', '', '', '0.00'),
-(7, 'P00-7', '29', '2023-01-24 17:50:37', '4', 'Tarjeta', 'Recojo en tienda', '107.20', '0.00', '321314', '107.20', '0.00', '', '', '', '0.00'),
-(8, 'PTV00-29', '29', '2023-01-24 17:54:14', '2', 'Tarjeta', 'Envio delivery', '107.20', '0.00', '321314', '107.20', '0.00', '', '', '', '0.00'),
-(9, 'PTV00-515', '515', '2023-01-24 18:07:25', '2', 'Tarjeta', 'Envio delivery', '107.20', '0.00', '321314', '107.20', '0.00', '', '', '', '0.00'),
-(10, 'PTV00-29', '29', '2023-01-24 19:10:42', '2', 'Tarjeta', 'Envio delivery', '53.60', '0.00', '321314', '53.60', '0.00', '', '', '', '0.00'),
-(11, 'PTV00-519', '519', '2023-01-25 20:25:05', '2', 'Tarjeta', 'Envio delivery', '80.40', '0.00', '321314', '85.40', '5.00', '', '', '', '0.00'),
-(12, 'PTV00-519', '519', '2023-01-25 20:28:23', '1', 'Tarjeta', 'Envio delivery', '107.20', '0.00', '321314', '112.20', '5.00', '', '', '', '0.00');
+(15, 'PTV00-29', '29', '2023-01-27 16:03:50', '2', 'Pagoefectivo', 'Envio delivery', '107.20', '0.00', '321314', '112.20', '5.00', '', '', '', '0.00');
 
 -- --------------------------------------------------------
 
@@ -2429,7 +2442,7 @@ CREATE TABLE IF NOT EXISTS `producto` (
   `idmarca` int(15) NOT NULL,
   `preciopromocion` decimal(11,2) NOT NULL,
   PRIMARY KEY (`idproducto`)
-) ENGINE=InnoDB AUTO_INCREMENT=10001 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10002 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `producto`
@@ -2750,7 +2763,8 @@ INSERT INTO `producto` (`idproducto`, `idproductosublinea`, `idunidadmedida`, `c
 (342, '53', '4', 'COD', 'NOM', 'Sujetador de Plástico', '06360005', '1613043922.jpg', 'IMG_BIG', '1', 'PROV', '0.80', 'obs', 137, '1.00'),
 (343, '52', '4', 'COD', 'NOM', 'Sujetador de Silicona', '06360006', '1613044218.jpg', 'IMG_BIG', '1', 'PROV', '1.50', 'obs', 138, '1.00'),
 (344, '53', '4', 'COD', 'NOM', 'Mascarilla Protectora Kn95', '06360003', '1613044157.jpg', 'IMG_BIG', '1', 'PROV', '2.00', 'obs', 139, '1.00'),
-(10000, '1000', '1000', 'COD', 'NOM', 'Mermelada de Fresa x 1 Kg Barril Compass.', '7751158001755', '1611937719.jpg', 'IMG_BIG', '1', 'PROV', '10.40', 'obs', 24, '1.00');
+(10000, '1000', '1000', 'COD', 'NOM', 'Mermelada de Fresa x 1 Kg Barril Compass.', '7751158001755', '1611937719.jpg', 'IMG_BIG', '1', 'PROV', '10.40', 'obs', 24, '1.00'),
+(10001, '87', '4', 'COD', 'NOM', 'Celular X', '2343343', '1674764639.png', 'IMG_BIG', '1', 'PROV', '1.00', 'obs', 142, '1.00');
 
 -- --------------------------------------------------------
 
@@ -3769,7 +3783,7 @@ CREATE TABLE IF NOT EXISTS `sublinea` (
   `imagenproductosublinea` varchar(150) COLLATE utf8_spanish_ci DEFAULT '',
   `condicion` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`idproductosublinea`)
-) ENGINE=MyISAM AUTO_INCREMENT=87 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=88 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `sublinea`
@@ -3861,7 +3875,8 @@ INSERT INTO `sublinea` (`idproductosublinea`, `idproductolinea`, `nroproductosub
 (83, '1', 'NRO', 'KIWICHA', 'noimage.jpg', 1),
 (84, '30', 'NRO', 'Cacao', 'noimage.jpg', 1),
 (85, '22', 'NRO', 'Vodka', 'noimage.jpg', 1),
-(86, '27', 'NRO', 'Máquinas de Afeitar y Repuestos', 'noimage.jpg', 1);
+(86, '27', 'NRO', 'Máquinas de Afeitar y Repuestos', 'noimage.jpg', 1),
+(87, '37', 'NRO', 'Samsung', 'noimage.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -3899,7 +3914,7 @@ CREATE TABLE IF NOT EXISTS `tiendatemp` (
   `idusuario` varchar(150) COLLATE utf8_spanish_ci NOT NULL,
   `idstore` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2440 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2454 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Dumping data for table `tiendatemp`
@@ -5617,7 +5632,9 @@ INSERT INTO `tiendatemp` (`id`, `idusuario`, `idstore`) VALUES
 (2417, '1', '321314'),
 (2429, '515', '321314'),
 (2428, '515', '321314'),
-(2437, '29', '321314');
+(2440, '519', '321314'),
+(2453, '29', '321314'),
+(2452, '29', '321314');
 
 -- --------------------------------------------------------
 

@@ -72,7 +72,7 @@ function confirmarCompra(value) {
   var subtotal_input = parseFloat(
     document.querySelector("#subtotal_input").value
   ); //cambio monto z30
-  if (subtotal_input > 30) {
+  if (subtotal_input > 1) {
     $("span.minimumOrder").css("display", "none");
     document.querySelector("#confirmar_compra").style.visibility = "hidden";
 
@@ -156,7 +156,8 @@ function confirmarCompra(value) {
       $(".confirmPurcharse-container").css("height", "0px");
     });
   } else {
-    Android.showToast("El pedido debe ser mayor a 30 soles");
+    /* Android.showToast("El pedido debe ser mayor a 30 soles"); */
+    alert("El pedido debe ser mayor a 30 soles");
     return;
   }
 }
